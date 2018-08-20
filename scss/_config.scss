@@ -1,5 +1,5 @@
-$primary-color: rgb(255, 0, 0);
-$secondary-color: #ffe600;
+$primary-color: #2c3e50;
+$secondary-color: #e74c3c;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $background-opacity: 0.9;
@@ -29,7 +29,7 @@ $background-opacity: 0.9;
   }
 }
 
-// Set Text Color
+// "czytelność" kolorów
 @function set-text-color($color) {
   @if (lightness($color) > 40) {
     @return #000;
@@ -38,7 +38,7 @@ $background-opacity: 0.9;
   }
 }
 
-// Media Query Mixins
+// mixin odpowiedzialne za responsywność strony
 @mixin mediaSm {
   @media screen and (max-width: 500px) {
     @content;

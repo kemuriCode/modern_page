@@ -15,7 +15,6 @@ body {
   line-height: 1.5;
 }
 
-// Headings
 h1,
 h2,
 h3 {
@@ -85,7 +84,7 @@ main {
   .bio-image {
     grid-area: bioimage;
     margin: auto;
-    border-radius: 10%;
+    border-radius: 50%;
     border: $secondary-color 3px solid;
   }
 
@@ -113,7 +112,7 @@ main {
   }
 }
 
-// Work/Projects
+// sekcja praca
 .projects {
   display: grid;
   grid-gap: 0.7rem;
@@ -131,7 +130,7 @@ main {
   }
 }
 
-// Contact Page
+// strona kontaktowa
 .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -157,7 +156,7 @@ main {
   }
 }
 
-// Button Styles
+// styl przycisków
 .btn {
   display: block;
   padding: 0.5rem 1rem;

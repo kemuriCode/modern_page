@@ -1,4 +1,4 @@
-// Menu Button
+// przycisk menu
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -15,35 +15,33 @@
     @include easeOut;
   }
 
-  // Rotate Into X With Menu Lines
+  // zmiana lini menu na 'X'
   &.close {
     transform: rotate(180deg);
 
     .btn-line {
-      // Line 1 - Rotate
+      // rotacja pierwszej lini
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
       }
 
-      // Line 2 - Hide
+      // ukrycie się drugiej lini
       &:nth-child(2) {
         opacity: 0;
       }
 
-      // Line 3 - Rotate
+      // rotacja trzeciej lini
       &:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
       }
     }
   }
 }
-
-// Menu Overlay
+// menu
 .menu {
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden;
 
   &.show {
@@ -67,23 +65,21 @@
     padding: 0;
     background: darken($primary-color, 5);
     list-style: none;
+    opacity: 0.9;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
 
     &.show {
-      // Slide in from top
       transform: translate3d(0, 0, 0);
     }
   }
 
-  // Branding Side
   &-branding {
     background: $primary-color;
     transform: translate3d(0, 100%, 0);
     @include easeOut;
 
     &.show {
-      // Slide in from bottom
       transform: translate3d(0, 0, 0);
     }
 
@@ -101,7 +97,6 @@
     @include easeOut;
 
     &.show {
-      // Slide in from right
       transform: translate3d(0, 0, 0);
     }
 
@@ -127,7 +122,6 @@
   }
 }
 
-// Delay each nav item slide by 0.1s
 @for $x from 1 through 4 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
